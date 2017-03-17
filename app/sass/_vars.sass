@@ -1,0 +1,37 @@
+@import "bourbon"
+@import "neat"
+
+
+
+$max-width: 1440px 
+$grid-columns: 12
+//Цветовая схема сайта
+
+//Шрифты размеры и начертания
+=fz($font-sizez)
+	font-size: em($font-sizez)	
+
+=ff($font-fam)
+	font-family: $font-fam, serif
+=mg
+	margin: 0 auto
+//Свои переменные для отдельных проектов
+
+=input_search
+	border: solid 1px rgba(0, 0, 0, 0.1)
+	border-radius: 4px
+	line-height: 50px
+	height: 50px
+	+fz(16px)
+	&:hover,&:focus
+		outline: none
+
+=label_sea
+	+fz(16px)
+	font-family: 'SFUIText-Medium', serif
+	color: #060606
+	font-weight: 500
+
+=textresult
+	color: #fff
+	+ff('SFUIText-Semibold')

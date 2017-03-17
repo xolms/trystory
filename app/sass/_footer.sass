@@ -1,0 +1,91 @@
+@import "bourbon"
+@import "neat"
+
+.backstory_wrap
+	text-align: center
+	padding-bottom: 24px
+	padding-top: 17px
+	display: none
+	a
+		text-decoration: none
+		color: #000
+		+fz(18px)
+		span
+			font-family: 'SFUIText-Semibold', serif
+			padding-right: 10px
+//Футер
+footer
+	background-color: #000
+	padding-top: 62px
+	padding-bottom: 100px
+	color: #fff
+.top_footer
+	padding-bottom: 80px
+	width: 90%
+	@include outer-container
+.bottom_footer
+	border-top: 1px solid rgba(255,255,255,.2)
+	padding-top: 16px	
+	width: 90%
+	@include outer-container
+
+
+
+.footer_logo
+	margin-bottom: 20px
+	display: inline-block
+	img 
+		width: 72px
+
+.footer_info_wrap
+	+fz(16px)
+	line-height: 23px
+	font-family: "SFUIText-Regular" ,serif
+	opacity: .69
+
+
+.footer_mnu_item
+	display: inline-block
+	padding-right: 40px
+	line-height: 32px
+	&:last-child
+		padding-right: 0
+	ul
+		list-style-type: none	
+	a	
+		color: #9b9b9b
+		text-decoration: none
+		transition: all .25s
+		&:hover,&:focus
+			color: darken(#9b9b9b, 20%)
+
+
+
+.footer_social_wrap
+	text-align: right
+.footer_social_items
+	padding-top: 16px
+	a
+		display: inline-block
+		width: 37px
+		height: 37px
+		text-align: center
+		color: #fff
+		border-radius: 3px
+		border: 1px solid rgba(255,255,255,.2)
+		margin-right: 9px
+		transition: all .25s
+		&:last-child
+			margin-right: 0	
+		i
+		position: relative
+		padding-top: 8px
+		&:hover,&:focus
+			border: 1px solid #fff
+
+
+.footer_copy_wrapper
+	float: left
+	opacity: .69
+
+

@@ -1,0 +1,157 @@
+extend template
+block title
+	title index
+
+block vars
+	-var head = 0
+
+block content
+	#search.search-container
+		.search-container__controls
+			.wrapper-search.wrapper-search__controls
+				h2.second-title.controls_second-title Searching
+				form
+					.search-item
+						label(for="location" class="search-item__label") Location
+						input(type="text" placeholder="Select Location" class="search-item__input search-item__input_full" id="location")
+					.search-line.search-line_controls
+					.search-item
+						.search-item__title Dates
+						.search-item__wrap
+							label(for="date_from" class="search-item__label search-item__label_small") from
+							input(type="text" class="search-item__input search-item__input_nofull" id="date_from")
+						.search-item__wrap
+							label(for="date_till" class="search-item__label search-item__label_small search-item__label_last") till
+							input(type="text" class="search-item__input search-item__input_nofull" id="date_till")
+
+					.search-line.search-line_controls
+
+					.search-item
+						.search-item__title Price range
+						.slider-comp
+							.slider-wrap
+								.search-item__wrap
+									span.search-item__icon.search-item__icon_first
+									label(for="price_from" class="search-item__label search-item__label_small") from
+									input(type="text" class="search-item__input search-item__input_nofull search-item__input_price price_from" id="price_from" value="0")
+								.search-item__wrap
+									span.search-item__icon.search-item__icon_last -
+									label(for="price_to" class="search-item__label search-item__label_small search-item__label_last search-item__label_to") to
+									input(type="text" class="search-item__input search-item__input_nofull search-item__input_price price_to" id="price_to" value="1000")
+								.search-slider
+
+					.search-line.search-line_controls
+
+					.search-item
+						h4.fourth-title.fourth-title_checkbox Categories
+						+check('Car')
+						+check('Night time')
+						+check('Nature')
+						+check('Animal Friendly')
+						+check('Make-up')
+						+check('LGBT Friendly')
+						+check('Guide tour')
+						+check('All files')
+
+					.search-line.search-line_controls
+
+					.search-item
+						h4.fourth-title.fourth-title_checkbox Facilities
+						+check('Car')
+						+check('Night time')
+						+check('Nature')
+						+check('Animal Friendly')
+						+check('Make-up')
+						+check('LGBT Friendly')
+						+check('Guide tour')
+						+check('All files')
+
+					.search-line.search-line_controls
+
+
+
+					.search-item
+						input(type="submit" value="Search" class="button button_search button_yellow")
+
+		.search-container__results
+			.wrapper-search.wrapper-search__results
+				.mobile-search
+					form
+						<input type="text" class="mobile-search__input mobile-search__input_location" placeholder="Select Location"><input type="text" class="mobile-search__input mobile-search__input_date" placeholder="Select date or a period"><input type="submit" class="mobile-search__submit" value="SEARCH">
+				.topline-select
+					h2.second-title.result_second-title Here are 50 Photographers we found
+					.button.button_filter.button_dark.button_filter_desktop Filters
+					.topline-select__container
+						select.topline-select__select
+							option(value="hide") Rating
+							option(value="highest") Highest
+							option(value="lowest") Lowest
+						select.topline-select__select
+							option(value="hide") Price
+							option(value="highest") Highest
+							option(value="lowest") Lowest
+				.results-container
+					+elements
+					+elements
+					+elements
+					+elements
+					+elements
+					+elements
+					+elements
+					+elements
+					+elements
+					a(href="#" class="button button_white button_load") load more
+					.search-line.search-line_results
+				h2.second-title.second-title_results.second-title_results_hidemobile Viewed recently
+				.results-container.results-container_hidemobile
+					+elements_notmoney
+					+elements_notmoney
+					+elements_notmoney
+					.search-line.search-line_results
+				h2.second-title.second-title_results.second-title_results_hidemobile Inspring cases around your area
+				.results-container.results-container_full.results-container_hidemobile
+					+elements_full
+					+elements_full
+	.mobile-filter
+		.mobile-filter__wrap
+			.mobile-filter__title
+				h2.second-title.second-title_filter Searching filters
+				.mobile-filter__close
+					.mobile-filter__close_item.mobile-filter__close_item_first
+					.mobile-filter__close_item.mobile-filter__close_item_last
+				.mobile-filter__clear Clear filters
+			.search-line.search-line_filter
+			form
+				.search-item
+					h4.fourth-title.fourth-title_checkbox Sort by
+					+check_radio('From low')
+					+check_radio('From high')
+					+check_radio_none
+				.search-line.search-line_filter
+				.search-item
+					h4.fourth-title.fourth-title_checkbox Price range
+					.slider-mobile
+					.search-line.search-line_filter
+					.search-item.search-item_inline
+						h4.fourth-title.fourth-title_checkbox Categories
+						+check('Car')
+						+check('Night time')
+						+check('Nature')
+						+check('Animal Friendly')
+						+check('Make-up')
+						+check('LGBT Friendly')
+						+check('Guide tour')
+						+check('All files')
+					.search-line.search-line_filter.search-line_filter_showmobile
+					.search-item.search-item_inline.search-item_inline_last
+						h4.fourth-title.fourth-title_checkbox Facilities
+						+check('Car')
+						+check('Night time')
+						+check('Nature')
+						+check('Animal Friendly')
+						+check('Make-up')
+						+check('LGBT Friendly')
+						+check('Guide tour')
+						+check('All files')
+					.search-line.search-line_filter
+					input(type="submit" value="Apply filters" class="button button_dark button_apply")

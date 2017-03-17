@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.formstyler/1.7.7/jquery.formstyler.css"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  </head>
+  <body>
+    <div class="top-menu">
+      <div class="top-menu__container">
+        <div class="top-menu__item top-menu__item_left top-menu__item_hidemobile">
+          <ul class="top-menu__list">
+            <li class="top-menu__list__item"><a href="#" class="top-menu__link top-menu__link_first">About </a></li>
+            <li class="top-menu__list__item"><a href="#" class="top-menu__link top-menu__link_last">Stories </a></li>
+          </ul>
+        </div>
+        <div class="top-menu__item top-menu__item_center">
+          <div class="top-menu__logo">
+            <div class="top-menu__logo__container"><a href="#"><img src="img/logo.svg" alt="logo" class="top-menu__logo__img"/></a></div>
+          </div>
+        </div>
+        <div class="top-menu__item top-menu__item_right top-menu__item_hidemobile">
+          <ul class="top-menu__list">
+            <li class="top-menu__list__item"><a href="#" class="top-menu__link top-menu__link_first">Log in</a></li>
+            <li class="top-menu__list__item"><a href="#" class="top-menu__link top-menu__link_last">Sign in</a></li>
+            <li class="top-menu__list__item"><a href="#" class="top-menu__link top-menu__link_button">Become a photographer</a></li>
+          </ul>
+        </div>
+        <div class="top-menu__item top-menu__item_right top-menu__item_showmobile">
+          <div class="mobile-button"><span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <div class="mobile-menu__topline">
+        <div class="mobile-menu__topline__right">
+          <div class="mobile-button mobile-button_dark"><span></span></div>
+        </div>
+      </div>
+      <div class="mobile-menu__container">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__list__item"><a href="#" class="mobile-menu__link">my profile</a></li>
+          <li class="mobile-menu__list__item"><a href="#" class="mobile-menu__link">orders</a></li>
+          <li class="mobile-menu__list__item"><a href="#" class="mobile-menu__link">chats</a></li>
+          <li class="mobile-menu__list__item"><a href="#" class="mobile-menu__link">about</a></li>
+          <li class="mobile-menu__list__item"><a href="#" class="mobile-menu__link mobile-menu__link_last">stories</a></li>
+          <li class="mobile-menu__list__item"><a href="#" class="mobile-menu__link mobile-menu__link_button">Become a photographer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="search" class="search-container">
+      <div class="search-container__controls">
+        <div class="wrapper-search wrapper-search__controls">
+          <h2 class="second-title controls_second-title">Searching</h2>
+          <form>
+            <div class="search-item">
+              <label for="location" class="search-item__label">Location</label>
+              <input type="text" placeholder="Select Location" id="location" class="search-item__input search-item__input_full"/>
+            </div>
+            <div class="search-line search-line_controls"></div>
+            <div class="search-item">
+              <div class="search-item__title">Dates</div>
+              <div class="search-item__wrap">
+                <label for="date_from" class="search-item__label search-item__label_small">from</label>
+                <input type="text" id="date_from" class="search-item__input search-item__input_nofull"/>
+              </div>
+              <div class="search-item__wrap">
+                <label for="date_till" class="search-item__label search-item__label_small search-item__label_last">till</label>
+                <input type="text" id="date_till" class="search-item__input search-item__input_nofull"/>
+              </div>
+            </div>
+            <div class="search-line search-line_controls"></div>
+            <div class="search-item">
+              <div class="search-item__title">Price range</div>
+              <div class="slider-comp">
+                <div class="slider-wrap">
+                  <div class="search-item__wrap"><span class="search-item__icon search-item__icon_first"></span>
+                    <label for="price_from" class="search-item__label search-item__label_small">from</label>
+                    <input type="text" id="price_from" value="0" class="search-item__input search-item__input_nofull search-item__input_price price_from"/>
+                  </div>
+                  <div class="search-item__wrap"><span class="search-item__icon search-item__icon_last">-</span>
+                    <label for="price_to" class="search-item__label search-item__label_small search-item__label_last search-item__label_to">to</label>
+                    <input type="text" id="price_to" value="1000" class="search-item__input search-item__input_nofull search-item__input_price price_to"/>
+                  </div>
+                  <div class="search-slider"></div>
+                </div>
+              </div>
+            </div>
+            <div class="search-line search-line_controls"></div>
+            <div class="search-item">
+              <h4 class="fourth-title fourth-title_checkbox">Categories</h4>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Car
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Night time
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Nature
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Animal Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Make-up
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">LGBT Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Guide tour
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">All files
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+            </div>
+            <div class="search-line search-line_controls"></div>
+            <div class="search-item">
+              <h4 class="fourth-title fourth-title_checkbox">Facilities</h4>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Car
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Night time
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Nature
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Animal Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Make-up
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">LGBT Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Guide tour
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">All files
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+            </div>
+            <div class="search-line search-line_controls"></div>
+            <div class="search-item">
+              <input type="submit" value="Search" class="button button_search button_yellow"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="search-container__results">
+        <div class="wrapper-search wrapper-search__results">
+          <div class="mobile-search">
+            <form><input type="text" class="mobile-search__input mobile-search__input_location" placeholder="Select Location"><input type="text" class="mobile-search__input mobile-search__input_date" placeholder="Select date or a period"><input type="submit" class="mobile-search__submit" value="SEARCH"></form>
+          </div>
+          <div class="topline-select">
+            <h2 class="second-title result_second-title">Here are 50 Photographers we found</h2>
+            <div class="button button_filter button_dark button_filter_desktop">Filters</div>
+            <div class="topline-select__container">
+              <select class="topline-select__select">
+                <option value="hide">Rating</option>
+                <option value="highest">Highest</option>
+                <option value="lowest">Lowest</option>
+              </select>
+              <select class="topline-select__select">
+                <option value="hide">Price</option>
+                <option value="highest">Highest</option>
+                <option value="lowest">Lowest</option>
+              </select>
+            </div>
+          </div>
+          <div class="results-container">
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-item__right">
+                  <div class="result-item__money">88</div>
+                  <div class="result-item__hour">PER HOUR</div>
+                </div></a></div><a href="#" class="button button_white button_load">load more</a>
+            <div class="search-line search-line_results"></div>
+          </div>
+          <h2 class="second-title second-title_results second-title_results_hidemobile">Viewed recently</h2>
+          <div class="results-container results-container_hidemobile">
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div></a></div>
+            <div class="result-item result-item_small"><a href="#" class="result-item__link"><img src="img/element.jpg" alt="elem" class="result-item__img"/>
+                <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                  <div class="result-item__wrap">
+                    <div class="result-item__name">Ollie Robinson</div>
+                    <div class="result-item__stars">
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_on"></div>
+                      <div class="result-item__star result-item__star_off"></div>
+                    </div>
+                  </div>
+                </div></a></div>
+            <div class="search-line search-line_results"></div>
+          </div>
+          <h2 class="second-title second-title_results second-title_results_hidemobile">Inspring cases around your area</h2>
+          <div class="results-container results-container_full results-container_hidemobile">
+            <div class="result-item result-item_full result-item_hover"><img src="img/adl1z8_ngy-stacy-wyss.jpg" alt="elem" class="result-item__img"/>
+              <div class="result-item__top">
+                <div class="result-item__country">Sinai , Egypt</div>
+                <h2 class="result-item__title">See the sun rise over Mount Sinai</h2><a href="#" class="button button_yellow button_resulttext">Explore The story</a>
+              </div>
+              <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                <div class="result-item__wrap">
+                  <div class="result-item__name">Ollie Robinson</div>
+                  <div class="result-item__stars">
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_off"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="result-item result-item_full result-item_hover"><img src="img/adl1z8_ngy-stacy-wyss.jpg" alt="elem" class="result-item__img"/>
+              <div class="result-item__top">
+                <div class="result-item__country">Sinai , Egypt</div>
+                <h2 class="result-item__title">See the sun rise over Mount Sinai</h2><a href="#" class="button button_yellow button_resulttext">Explore The story</a>
+              </div>
+              <div class="result-item__left"><img src="img/team.jpg" alt="avatar" class="result-item__avatar"/>
+                <div class="result-item__wrap">
+                  <div class="result-item__name">Ollie Robinson</div>
+                  <div class="result-item__stars">
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_on"></div>
+                    <div class="result-item__star result-item__star_off"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-filter">
+      <div class="mobile-filter__wrap">
+        <div class="mobile-filter__title">
+          <h2 class="second-title second-title_filter">Searching filters</h2>
+          <div class="mobile-filter__close">
+            <div class="mobile-filter__close_item mobile-filter__close_item_first"></div>
+            <div class="mobile-filter__close_item mobile-filter__close_item_last"></div>
+          </div>
+          <div class="mobile-filter__clear">Clear filters</div>
+        </div>
+        <div class="search-line search-line_filter"></div>
+        <form>
+          <div class="search-item">
+            <h4 class="fourth-title fourth-title_checkbox">Sort by</h4>
+            <div class="checkbox-item checkbox-item_radio">
+              <label class="checkbox-item__label checkbox-item__label_radio ">From low
+                <input type="radio" name="sort_by" class="checkbox-item__input checkbox-item__input_radio"/>
+              </label>
+            </div>
+            <div class="checkbox-item checkbox-item_radio">
+              <label class="checkbox-item__label checkbox-item__label_radio ">From high
+                <input type="radio" name="sort_by" class="checkbox-item__input checkbox-item__input_radio"/>
+              </label>
+            </div>
+            <div class="checkbox-item checkbox-item_radio">
+              <label class="checkbox-item__label checkbox-item__label_radio checkbox-item__label_hidemobile">Recommended
+                <input type="radio" name="sort_by" class="checkbox-item__input checkbox-item__input_radio"/>
+              </label>
+            </div>
+          </div>
+          <div class="search-line search-line_filter"></div>
+          <div class="search-item">
+            <h4 class="fourth-title fourth-title_checkbox">Price range</h4>
+            <div class="slider-mobile"></div>
+            <div class="search-line search-line_filter"></div>
+            <div class="search-item search-item_inline">
+              <h4 class="fourth-title fourth-title_checkbox">Categories</h4>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Car
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Night time
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Nature
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Animal Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Make-up
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">LGBT Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Guide tour
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">All files
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+            </div>
+            <div class="search-line search-line_filter search-line_filter_showmobile"></div>
+            <div class="search-item search-item_inline search-item_inline_last">
+              <h4 class="fourth-title fourth-title_checkbox">Facilities</h4>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Car
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Night time
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Nature
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Animal Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Make-up
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">LGBT Friendly
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">Guide tour
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <label class="checkbox-item__label">All files
+                  <input type="checkbox" class="checkbox-item__input"/>
+                </label>
+              </div>
+            </div>
+            <div class="search-line search-line_filter"></div>
+            <input type="submit" value="Apply filters" class="button button_dark button_apply"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.formstyler/1.7.7/jquery.formstyler.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+  </body>
+</html>

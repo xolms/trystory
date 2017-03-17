@@ -1,0 +1,593 @@
+@import "bourbon"
+@import "neat"
+
+.remove_mg
+	margin-bottom: -4px
+
+.story_item
+	img
+		display: table-cell
+		height: auto
+	.text
+		display: table-cell
+		vertical-align: middle	
+
+//Контейнер секций
+.wrapper_story
+	@include outer-container
+	display: table
+	width: 100%
+
+//Отдельные стили каждой секции
+
+//Основная секция
+.main_story
+	padding-top: 83px
+	padding-bottom: 89px
+	img
+		width: 100%
+		margin-right: 0
+		margin-left: auto
+		max-width: 420px
+	.text
+		width: 50%
+		margin: 0 auto
+		padding-left: 60px
+	.country
+		font-family: 'SFUIText-Bold', serif
+		+fz(18px)
+		letter-spacing: -0.1px
+		padding-bottom: 11px
+		text-transform: uppercase
+		max-width: 480px
+	h2
+		+fz(42px)
+		font-family: 'SFUIText-Bold', serif
+		line-height: 56px
+		letter-spacing: 1.3px
+		color: #191919
+		text-transform: uppercase
+		padding-bottom: 16px
+		max-width: 480px
+	p
+		color: #4a4a4a
+		line-height: 24px
+		padding-bottom: 25px
+		max-width: 480px
+		&:last-child
+			padding-bottom: 0
+
+
+//Секция с картинкой на весь экран
+.full_image
+	position: relative
+	margin-bottom: -4px
+	.wrapper_story
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4))
+	img
+		width: 100%
+	.text
+		position: absolute
+		bottom: 5%
+		right: 5%
+		font-family: 'SFUIText-RegularItalic', serif
+		max-width: 397px
+		line-height: 24px
+		color: #fff
+		z-index: 3
+		&::before
+			content: ''
+			width: 3px
+			height: 110%
+			position: absolute
+			display: block
+			background-color: #fcff00
+			left: -20px
+			margin-top: -5px
+
+//Секция с картинкой меньше половины экрана
+.four_img
+	.text_right
+		.text
+			h3
+				margin-left: 20%
+				margin-right: auto
+			p
+				margin-left: 20%
+				margin-right: auto
+	.text_left
+		.text
+			h3
+				margin-right: 20%
+				margin-left: auto
+
+			p 
+				margin-right: 20%	
+				margin-left: auto
+	img
+		width: 100%
+	.text
+		width: 55%
+	h3
+		+fz(32px)
+		line-height: 44px
+		letter-spacing: 1px
+		color: #000
+		font-family: 'SFUIText-Bold', serif
+		text-transform: uppercase
+		padding-bottom: 73px
+		max-width: 603px
+		
+	p 
+		line-height: 25px
+		opacity: .8
+		max-width: 603px
+		padding-bottom: 20px
+		&:last-child
+			padding-bottom: 0
+
+//Секция где картинка на половину экрана
+.half_img
+	p
+		max-width: 397px
+		margin: 0 auto
+		line-height: 25px
+		opacity: .8
+
+.image_left
+	img
+		margin-right: 0
+		margin-left: auto
+		width: 100%
+		max-width: 791px
+	.text
+		width: 45%
+
+.image_right
+	img
+		margin-left: 0
+		margin-right: auto
+		width: 100%
+		max-width: 649px
+	.text
+		width: 55%	
+	p 
+		+fz(23px)
+		line-height: 33px
+		letter-spacing: 0.7px
+		opacity: 1
+		font-family: 'SFUIText-Semibold', serif
+		color: #191919
+		max-width: 517px
+		text-transform: uppercase
+
+
+
+
+
+//More story
+.morestory
+	padding-top: 57px
+	padding-bottom: 85px
+	.wrapper_story
+		display: block
+		width: 90%
+	h5
+		font-family: 'SFUIText-Semibold', serif
+		+fz(23px)
+		padding-bottom: 44px
+.morestory_item
+	width: 49.7%
+	display: inline-block
+	position: relative
+	transition: all .25s
+	overflow: hidden
+	margin-bottom: -8px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		display: block
+		left: 0
+		right: 0
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 2, 32, 0.5))
+		bottom: 4px
+		transition: all .25s
+		border-radius: 4px
+	.image
+		width: 100%
+		height: auto
+		border-radius: 4px 
+	.text
+		position: absolute
+		top: 40%
+		transform: translateY(-50%)
+		left: 0
+		right: 0
+		text-align: center
+		.city
+			+fz(11px)
+			font-family: 'SFUIText-Bold', serif
+			line-height: 17px
+			color: #fff
+			text-transform: uppercase
+		h3
+			color: #fff
+			padding-top: 7px
+			padding-bottom: 20px
+			+fz(42px)
+			line-height: 42px
+			font-family: 'SFUIText-Bold', serif
+		a
+			+fz(10px)
+			font-family: 'SFUIText-Heavy',serif
+			text-transform: uppercase
+			color: #000
+			text-decoration: none
+			transition: all .25s
+			background-color: #fcff00
+			padding: 10px 0
+			width: 154px
+			display: inline-block
+			border-radius: 4px 
+			opacity: 0
+	.author
+		position: absolute
+		left: 18px
+		bottom: 20px
+		img
+			display: inline-block
+			width: 35px
+			border-radius: 10em
+			margin-right: 4px
+		.right
+			display: inline-block
+			vertical-align: top
+			.name
+				font-family: 'SFUIText-Semibold', serif
+				+fz(16px)
+				color: #fff
+			.stars
+				vertical-align: top
+				.item
+					width: 10px	
+					height: 10px
+					display: inline-block
+					background-repeat: no-repeat
+					&.on
+						background-image: url("../img/star-on.svg")
+					&.off
+						background-image: url("../img/star-off.svg")
+
+.morestory_item:hover
+	&::before
+		background-color: rgba(0, 0, 0, 0.4)
+	.text
+		a
+			opacity: 1
+
+
+
+//коментарии
+.comment_sec
+	padding-top: 95px
+	padding-bottom: 93px
+	max-width: 1440px
+	margin: 0 auto
+	background-color: #f7f7f7
+	.wrapper
+		@include outer-container
+		width: 90%
+	.left,.right
+		display: inline-block
+	.left
+		img
+			display: inline-block
+			width: 98px
+			border-radius: 10em
+			margin-right: 20px
+		.text
+			display: inline-block
+			vertical-align: top
+			.name
+				+fz(23px)
+				color: #000
+				font-family: 'SFUIText-Semibold', serif
+				padding-top: 11px	
+				padding-bottom: 4px
+			.country
+				img
+					width: 20px
+					margin-right: 3px
+					vertical-align: middle
+				span
+					text-transform: uppercase
+					font-family: 'SFUIText-Semibold', serif
+					+fz(15px)
+					letter-spacing: 1px
+					color: #181818
+	.right
+		max-width: 518px
+		position: relative
+		padding-left: 90px
+		vertical-align: middle
+		bottom: 25px
+		img
+			display: block
+			width: 20px
+			margin-bottom: 15px
+		.text
+			color: #4a4a4a
+			line-height: 25px
+			+fz(14px)
+			font-family: 'SFUIText-RegularItalic', serif
+
+.backstory_wrap
+	display: none
+
+
+
+
+
+
+@media screen and (max-width: 1440px)
+	.four_img
+		.text_left
+			.text 
+				h3,p
+					margin: 0 auto
+		.text_right
+			.text 
+				h3,p
+					margin: 0 auto	
+
+
+
+@media screen and (max-width: 1200px)
+	.four_img
+		h3
+			max-width: 500px
+			padding-bottom: 30px
+		p
+			max-width: 500px
+
+
+
+
+@media screen and (max-width: 1023px)
+	.wrapper_story 
+		max-width: 600px
+
+	.main_story 
+		padding-top: 35px
+		padding-bottom: 35px
+		.text 
+			display: table-caption
+			width: 100%
+			padding-bottom: 35px
+			max-width: 600px
+			margin: 0 auto
+			.country
+				display: none
+			h2
+				display: none
+			p
+				opacity: 1
+				display: block
+				line-height: 23px			
+				color: #000
+				margin: 0 auto
+				+fz(15px)
+				padding-bottom: 10px
+				&:last-child
+					padding-bottom: 0			
+		img
+			display: table-row
+			width: 100%
+			max-width: 400px
+			margin: 0 auto
+
+
+	.full_image
+		padding-top: 35px
+		padding-bottom: 35px
+		.wrapper_story
+			&::before
+				display: none
+		.text
+			padding-top: 35px
+			position: relative
+			display: block
+			color: #040404
+			+fz(15px)
+			font-family: 'SFUIText-Regular', serif
+			line-height: 23px
+			bottom: 0
+			margin: 0 auto
+			right: 0	
+			width: 100%
+			max-width: 600px
+			&::before
+				display: none
+			
+
+	.four_img
+		.wrapper_story
+			padding-bottom: 35px
+		img
+			display: table-row
+		.text
+			display: table-footer-group
+			width: 100%
+			h3
+				padding-top: 35px
+				+fz(28px)
+				line-height: 34px
+				text-align: center
+				padding-bottom: 20px
+				max-width: 600px
+			p 
+				+fz(15px)
+				line-height: 23px
+				color: #000
+				opacity: 1
+				max-width: 600px
+
+
+	.half_img 
+		padding-top: 35px
+		img
+			display: table-row
+			width: 100%
+			margin-bottom: 35px
+		.text
+			display: table-footer-group
+		p
+			width: 100%
+			+fz(15px)
+			max-width: 600px
+			line-height: 23px
+			opacity: 1
+			color: #000
+
+
+
+
+	.morestory
+		padding-top: 35px
+		padding-bottom: 35px
+	.morestory_item
+		width: 100%
+		margin-bottom: 35px
+		&:last-child
+			margin-bottom: 0
+		&::before
+			border-radius: 0
+		.image	
+			border-radius: 0
+		.text
+			top: 40%
+			a
+				opacity: 1
+				+fz(18px)
+				width: 250px
+
+	.comment_sec
+		padding: 35px
+		max-width: 600px
+		.wrapper
+			width: 100%
+		.left,.right
+			display: block
+		.left
+			text-align: center
+			padding-bottom: 10px
+			img
+				display: block
+				margin: 0 auto
+				width: 60px
+			.text
+				.name
+					+fz(18px)
+				.country
+					display: none	
+		.right
+			padding-left: 0
+			bottom: 0
+			margin: 0 auto
+			width: 100%	
+			max-width: 600px
+			img
+				margin-bottom: 10px
+			.text
+				font-family: 'SFUIText-Regular', serif
+				line-height: 23px
+				color: #000
+
+
+
+	.backstory_wrap
+		display: block
+		text-align: center
+		padding-bottom: 35px
+		a
+			+fz(16px)
+			color: #000
+			text-decoration: none
+			img
+				position: relative
+				margin-left: 5px
+				top: 1px
+
+
+@media screen and (max-width: 768px)
+	.wrapper_story
+		max-width: 480px
+		width: 100% 
+			
+		img
+			display: table-row
+
+	.main_story
+		.text
+			padding-left: 0
+
+	.four_img
+		.text_right
+			h3
+				margin: 0 auto
+				width: 100%
+			p
+				margin: 0 auto
+				width: 100%
+		.text_left
+			h3
+				margin: 0 auto
+				width: 100%
+			p 
+				margin: 0 auto
+				width: 100%
+	.half_img
+		p 
+			+fz(15px)
+			line-height: 23px
+			color: #000
+			font-family: 'SFUIText-Regular', serif
+			text-transform: none
+	
+	.comment_sec
+		max-width: 480px
+
+	.morestory 
+		display: none
+
+
+
+@media screen and (max-width: 480px)
+	.comment_sec
+		width: 100%
+		padding: 35px 15px
+	.wrapper_story
+		width: 100%
+		padding: 0 15px
+	.main_story .text p
+		padding: 0 15px
+		padding-bottom: 10px
+		&:last-child
+			padding-bottom: 0
+@media screen and (min-width: 1441px)
+	.wrapper_story
+		margin-bottom: 40px
+	.comment_sec
+		margin-bottom: 40px
+	.main_story
+		padding-bottom: 49px

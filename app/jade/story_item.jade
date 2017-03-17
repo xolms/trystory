@@ -1,0 +1,54 @@
+extend template
+block title
+	title search
+
+block vars
+	-var head = 1
+
+block content
+	.story_item.main_story
+		.wrapper_story
+			img(src="img/kl7ajlgl9cc-caspar-rubin.jpg", alt="photo")
+			.text
+				.country Бали, Индонезия
+				h2 На гребне <br>волны
+				p Бали - остров волшебства, кармы, кокосов, ну и в первую очередь - сёрфа. Большинство сёрф-школ продают опцию фотосъемки. Но такие снимки - коллекция подений, а на лице - преодаление преград стихии. 
+				p Можно ли вернуться с Бали с воистину красивыми снимками? Мы спросили об этом нашего фотографа - Александру
+	+comment_item
+	.story_item.full_image
+		.wrapper_story
+			img(src="img/pfqrybhiaxs-luke-chesser.jpg", alt="bigimg")
+			.text
+				p Есть еще лайвхак: если до лайнапа только-только добрался, либо просто еще не на все 100% ловишь все волны, а фото уже хочется, то на сессию надо взять с собой инструктора.
+	.story_item.four_img
+		.wrapper_story.text_left
+			.text
+				h3 Спец подготовка
+				p Многие сёрф-учителя и школы рекомендуют заниматься предварительно. Но по факту хорошо серфить поможет только регулярная практика именно серфинга и следование советам инструктора. Наш фотограф Александра Г. когда-то училась по видео урокам, собирала советы друзей, но учеником в серф-школе никогда не была. Конечно, если вы умеете плавать и не боитесь океана, это безусловный плюс.	
+			img(src="img/w8htbrcsmno-sabri-tuzcu.jpg", alt="text")
+	.story_item.four_img
+		.wrapper_story.text_right
+			img(src="img/w8htbrcsmno-sabri-tuzcu.jpg", alt="text")
+			.text
+				h3 Инструктор – залог удачной съемки
+				p Сёрф-инстрктор будет направлять, говорить когда можно разгребаться, чтобы никого не дропнуть (подрезать, преградить путь уже летящему по волне серферу, который стартовал ближе к пику) по неуверенности, сориентирует где лучшая позиция для старта относительно позиции фотографа, предупредит о приближайющей волне и в крайнем случае толкнет, если не удается каждый раз удачно разгребаться. В этом случае у начинающего серфера будет больше удачных попыток и больше удачных кадров.
+	+comment_item
+	.story_item.half_img
+		.wrapper_story.image_left
+			img(src="img/ybqcajvqng4-preston-pownell.jpg", alt="text")
+			.text
+				p Как подготовиться девочкам? Поговорим о причёске и мэйке. С намокшими волосами уже ничего не сделать. Можно скрутить тугую дульку или заплести косу. Все кто катается - обычно ничего с волосами не делают. Главное вовремя убирать их с лица, но не во время того как едешь на доске, а на лайнапе.
+	.story_item.half_img
+		.wrapper_story.image_right
+			.text
+				p “ Снимать лайфстайл люблю. Обычно перед заходом в воду стараюсь сделать парочку снимков, даже если не просили. “
+			img(src="img/ybqcajvqng4-preston-pownell.jpg", alt="text")
+	.story_item.full_image
+		.wrapper_story
+			img(src="img/pfqrybhiaxs-luke-chesser.jpg", alt="bigimg")
+	.morestory
+		.wrapper_story
+			h5 Explore more stories
+			+section_morestory_item('California ,  USA','Best spots of USA national parks')
+			+section_morestory_item('California ,  USA','Best spots of USA national parks')
+	include components/backstore		

@@ -1,0 +1,481 @@
+@import "bourbon"
+@import "neat"
+
+
+//Основные блоки страницы поиска
+.search-container
+	max-width: 1440px
+	width: 100%
+	+mg
+	display: table
+	padding-top: 80px
+	&__controls
+		display: table-cell
+		width: 432px
+		padding-top: 45px
+	&__results
+		display: table-cell
+		max-width: 1008px
+		box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.1)
+		background-color: rgba(247,247,247,.28)
+		padding-top: 45px
+
+
+//Блоки внутри основных контейнеров
+.wrapper-search
+	width: 100%
+	+mg
+	&__controls
+		max-width: 300px
+	&__results
+		max-width: 900px
+
+//Блок поискового айтема
+.search-item
+	padding-bottom: 11px
+	&_inline
+		display: inline-block
+		width: 49%
+		&_last
+			padding-left: 20%
+
+	&__wrap
+		display: inline-block
+		@include clearfix
+
+	&__icon
+		display: none
+		color: #fff
+		+fz(16px)
+		+ff('SFUIText-Regular')
+		background-repeat: no-repeat
+		vertical-align: middle
+		line-height: 16px
+		height: 15px
+		&_first
+			width: 8px
+			margin-right: 1px
+			background-position: left center
+			background-image: url("../img/path.svg")
+		&_last
+			padding: 0 2px
+
+	&__label
+		cursor: pointer
+		+ff('SFUIText-Medium')
+		+fz(16px)
+		color: #060606
+		&_small
+			padding-right: 3px
+		&_last
+			margin-left: 9px
+		&_to
+			padding-right: 6px
+
+	&__input
+		height: 50px
+		border: solid 1px rgba(0, 0, 0, 0.1)
+		background-color: rgba(242, 242, 242, 0.2)
+		border-radius: 4px
+		line-height: 50px
+		+ff("SFUIText-Regular")
+		transition: all .25s
+		+fz(15px)
+		&:hover,&:focus
+			outline: none
+			border: solid 1px rgba(0, 0, 0, 0.3)
+		&_full
+			width: 100%
+			margin-top: 7px
+			padding-left: 17px
+		&_nofull
+			width: 108px
+			padding-left: 10px
+		&_price
+			background-repeat: no-repeat
+			background-image: url("../img/black-dollar.svg")
+			background-position: 10px center
+			padding-left: 25px
+
+	&__title
+		+ff('SFUIText-Medium')
+		+fz(16px)
+		color: #060606
+		padding-bottom: 8px		
+
+//Стили чекбоксов
+.checkbox-item
+	padding-bottom: 10px
+	&_radio
+		display: inline-block
+		margin-right: 30px
+		&:last-child
+			margin-right: 0
+	&:last-child
+		padding-bottom: 0
+
+	&__input
+		display: none
+
+	&__label
+		+ff('SFUIText-Medium')
+		+fz(16px)
+		color: #000
+		cursor: pointer
+		&::before
+			content: ''
+			width: 16px
+			height: 16px
+			opacity: .3
+			border: solid 1px #000000
+			border-radius: 2px
+			position: relative
+			margin-right: 14px
+			display: inline-block
+			top: 2px
+		&_checked
+			&::before
+				background-repeat: no-repeat
+				background-position: center
+				background-image: url("../img/check.svg")
+				opacity: 1
+				background-color: #000
+
+//Линия внизу блоков
+.search-line
+	height: 1px
+	opacity: .1
+	background-color: #090909
+	&_controls
+		margin-top: 20px
+		margin-bottom: 15px
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+	&_results
+		margin-top: 60px
+		margin-bottom: 30px
+		width: 100%
+	&_filter
+		margin-top: 24px
+		margin-bottom: 10px
+		width: 100%
+		&_showmobile
+			display: none
+
+
+//Правая часть
+
+//Селекты
+.topline-select
+	padding-bottom: 34px
+	@include clearfix
+	&__container
+		display: inline-block
+		float: right
+	&__item
+		display: inline-block
+		position: relative
+		margin-right: 10px
+		width: 112px
+		vertical-align: top
+		bottom: 4px
+		&:last-child
+			margin-right: 0
+	&__select
+		display: none
+	&__currect
+		position: absolute
+		left: 0
+		right: 0
+		height: 38px
+		line-height: 38px
+		cursor: pointer
+		background-color: transparent
+		border: solid 1px rgba(0, 0, 0, 0.1)
+		border-radius: 4px
+		padding-left: 12px
+		+fz(16px)
+		color: rgba(0,0,0,.6)
+		background-repeat: no-repeat
+		background-image: url("../img/arrowdown.svg")
+		background-position: 85px center
+		&.active
+			background-color: #FFF
+	&__list
+		position: absolute
+		top: 42px
+		list-style-type: none
+		left: 0
+		right: 0
+		z-index: 3
+		background-color: #FFF
+		border: solid 1px rgba(0, 0, 0, 0.1)
+		border-radius: 4px
+		color: rgba(0,0,0,.6)
+		padding-top: 11px
+		display: none
+		li
+			padding-left: 11px
+			margin-bottom: 14px
+			&[rel="hide"]
+				display: none
+
+//Результаты поиска
+.results-container
+	&_full
+		padding-bottom: 150px
+.result-item
+	position: relative
+	transition: all .25s
+	&_full
+		width: 100%
+		padding-bottom: 0
+		margin-bottom: 17px
+		border-radius: 4px
+		overflow: hidden
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transition: all .25s
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 2, 32, 0.5))
+	&_small
+		padding-bottom: 17px
+		max-width: 296px
+		width: 32.89%
+		display: inline-block
+		&:nth-child(3n+1)
+			.result-item__link
+				margin-left: 0
+				margin-right: auto
+		&:nth-child(3n+2)
+			.result-item__link
+				margin-left: auto
+				margin-right: auto
+		&:nth-child(3n+3)
+			.result-item__link
+				margin-left: auto
+				margin-right: 0
+	&_hover
+		&:hover
+			&:after
+				background-color: rgba(0, 0, 0, 0.4)
+			.button
+				opacity: 1
+
+	&__link
+		display: block
+		width: 97%
+		border-radius: 4px
+		overflow: hidden
+		position: relative
+		box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.1)
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(14, 2, 32, 0.5))
+	
+	&__img
+		width: 100%
+		vertical-align: top
+	
+	&__left
+		color: #fff
+		z-index: 2
+		+ff('SFUIText-Semibold')
+		+fz(16px)
+		bottom: 20px
+		position: absolute
+		left: 20px
+
+	&__avatar
+		display: inline-block
+		width: 30px
+		height: 30px
+		border-radius: 10em
+		margin-right: 3px	
+
+	&__wrap
+		display: inline-block
+		vertical-align: top
+		position: relative
+		bottom: 4px
+
+	&__stars
+		position: relative
+		bottom: 3px
+		padding-left: 2px
+
+	&__star
+		display: inline-block
+		margin-right: 2px
+		width: 10px
+		height: 10px
+		background-repeat: no-repeat
+		background-position: center
+		&:last-child
+			margin-right: 0
+		&_on
+			background-image: url("../img/star-on.svg")
+		&_off
+			background-image: url("../img/star-off.svg")
+
+	&__name
+		+textresult
+		+fz(16px)
+
+	&__right
+		text-align: right
+		color: #fff
+		z-index: 2
+		+ff('SFUIText-Semibold')
+		+fz(16px)
+		bottom: 25px
+		right: 20px
+		position: absolute
+
+
+	&__money
+		+textresult
+		+fz(15px)
+		line-height: 17px
+		background-repeat: no-repeat
+		background-image: url("../img/path.svg")
+		background-position: 26px center
+
+	&__hour
+		+textresult
+		+fz(11px)
+		padding-top: 3px
+
+	&__top
+		position: absolute
+		left: 0
+		right: 0
+		top: 25%
+		text-align: center
+		z-index: 2
+
+	&__country
+		+fz(11px)
+		letter-spacing: -0.1px
+		+ff('SFUIText-Bold')
+		padding-bottom: 7px
+		text-transform: uppercase
+		color: #fff
+
+	&__title
+		+ff('SFUIText-Bold')
+		+fz(42px)
+		line-height: 42px
+		letter-spacing: 1.3px
+		color: #fff
+		max-width: 500px
+		+mg
+		padding-bottom: 22px
+
+
+
+//Мобильный поиск
+.mobile-search
+	position: fixed
+	top: 80px
+	width: 100%
+	z-index: 30
+	display: none
+
+	&__input
+		width: 42%
+		height: 60px
+		line-height: 60px
+		border: none
+		outline: none
+		margin: 0
+		background-color: #FFF
+		padding-left: 52px
+		+ff('SFUIText-Semibold')
+		+fz(16px)
+		background-repeat: no-repeat
+		&::placeholder
+			color: rgba(0,0,0,.7)
+		&_location
+			background-image: url("../img/location-icon.svg")
+			box-shadow: inset -1px 0 0 0 rgba(0, 0, 0, 0.05)
+			background-position: 32px 22px
+		&_date
+			background-image: url("../img/calendar-icon.svg")
+			background-position: 30px 23px
+
+	&__submit
+		width: 16%
+		border: none
+		height: 60px
+		background-color: #fcff00
+		color: #000000
+		text-transform: uppercase
+		+ff('SFUIText-Heavy')
+		+fz(13px)
+		letter-spacing: 1px
+		line-height: 60px
+		vertical-align: top
+		margin: 0
+		&:hover,&:focus
+			outline: none
+
+//Мобильный фильтр
+.mobile-filter
+	position: fixed
+	top: 80px
+	z-index: 100
+	bottom: 0
+	display: none
+	width: 100%
+	background-color: #FFF
+	padding-top: 55px
+	padding-bottom: 120px
+	overflow-y: scroll
+
+	&__wrap
+		max-width: 624px
+		+mg
+
+	&__title
+		@include clearfix
+
+	&__clear
+		+ff('SFUIText-Semibold')
+		color: #000
+		+fz(16px)
+		margin-right: 15px
+		float: right
+		display: none
+		margin-top: 5px
+
+	&__close
+		float: right
+		position: relative
+		width: 31px
+		cursor: pointer
+		display: block
+		height: 31px
+		&_item
+			width: 100%
+			height: 2px
+			position: relative
+			background-color: #000
+			&_first
+				transform: rotate(45deg)
+				top: 15px
+			&_last
+				transform: rotate(-45deg)
+				top: 13px
+
+@import 'sea_media'

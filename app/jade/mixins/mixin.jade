@@ -1,0 +1,95 @@
+mixin section_morestory_item(city,title)
+	.morestory_item
+		img(src="img/adl1z8_ngy-stacy-wyss.jpg", alt="text" class="image")
+		.text
+			.city=city
+			h3=title
+			a(href="#") Explore The story
+		.author
+			img(src="img/team.jpg", alt="avatar")
+			.right
+				.name Ollie Robinson
+				.stars
+					.item.on
+					.item.on
+					.item.on
+					.item.on
+					.item.off
+mixin comment_item
+	.comment_sec.grey_sec
+		.wrapper
+			.left
+				img(src="img/team.jpg", alt="avatar")
+				.text
+					.name Alexandra G.
+					.country
+						img(src="img/map.svg", alt="map")
+						span Бали, Индонезия
+			.right
+				img(src="img/quotes.svg", alt="svg")
+				.text
+					p Мейк для девочек - по желанию, и конечно водостойкий и натуральный. Никто не катается накрашенным, это немного нелепо смотрится. Лучше позаботиться о правильной стойке на доске и улыбаться!
+
+mixin check(name)
+	.checkbox-item
+		label(class="checkbox-item__label")
+			=name
+			input(type="checkbox" class="checkbox-item__input")
+mixin check_radio(name)
+	.checkbox-item.checkbox-item_radio
+		label(class="checkbox-item__label checkbox-item__label_radio ")
+			=name
+			input(type="radio" name="sort_by" class="checkbox-item__input checkbox-item__input_radio")
+mixin check_radio_none
+	.checkbox-item.checkbox-item_radio
+		label(class="checkbox-item__label checkbox-item__label_radio checkbox-item__label_hidemobile") Recommended
+			input(type="radio" name="sort_by" class="checkbox-item__input checkbox-item__input_radio")
+mixin elements
+	.result-item.result-item_small
+		a(href="#" class="result-item__link")
+			img(src="img/element.jpg", alt="elem" class="result-item__img")
+			.result-item__left
+				img(src="img/team.jpg", alt="avatar" class="result-item__avatar")
+				.result-item__wrap
+					.result-item__name Ollie Robinson
+					.result-item__stars
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_off
+			.result-item__right
+				.result-item__money 88
+				.result-item__hour PER HOUR
+mixin elements_notmoney
+	.result-item.result-item_small
+		a(href="#" class="result-item__link")
+			img(src="img/element.jpg", alt="elem" class="result-item__img")
+			.result-item__left
+				img(src="img/team.jpg", alt="avatar" class="result-item__avatar")
+				.result-item__wrap
+					.result-item__name Ollie Robinson
+					.result-item__stars
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_on
+						.result-item__star.result-item__star_off
+
+mixin elements_full
+	.result-item.result-item_full.result-item_hover
+		img(src="img/adl1z8_ngy-stacy-wyss.jpg", alt="elem" class="result-item__img")
+		.result-item__top
+			.result-item__country Sinai , Egypt
+			h2.result-item__title See the sun rise over Mount Sinai
+			a(href="#" class="button button_yellow button_resulttext") Explore The story
+		.result-item__left
+			img(src="img/team.jpg", alt="avatar" class="result-item__avatar")
+			.result-item__wrap
+				.result-item__name Ollie Robinson
+				.result-item__stars
+					.result-item__star.result-item__star_on
+					.result-item__star.result-item__star_on
+					.result-item__star.result-item__star_on
+					.result-item__star.result-item__star_on
+					.result-item__star.result-item__star_off

@@ -1,0 +1,40 @@
+//Подключение bourbon
+@import "bourbon"
+@import "neat"
+
+//Подключение сторонних sass файлов
+@import "vars"
+@import "fonts"
+
+
+//Sass стили
+*
+	margin: 0
+	padding: 0
+p
+	display: block		
+body
+	min-width: 320px
+	font-size: 16px
+	height: 100%
+	font-family: "SFUIText-Regular" , serif
+	padding: 0
+	margin: 0 auto
+	width: 100%
+	-webkit-font-smoothing: antialiased
+	&.body_fixed
+		position: fixed
+		overflow-y: hidden
+	
+@import "menu"
+@import "header"
+@import "sections"
+@import "title"
+@import "components_search"
+@import "plugin_styles"
+@import "button"
+
+
+//Сетка
+
+//Подключение медиазапросов

@@ -1,0 +1,31 @@
+{
+  "name": "xolmstemplate",
+  "version": "1.0.1",
+  "description": "Jade-Sass Build project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/xolms",
+  "license": "ISC",
+  "devDependencies": {
+    "bourbon-neat": "^1.8.0",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "node-bourbon": "^4.2.8",
+    "vinyl-ftp": "^0.5.0"
+  },
+  "dependencies": {
+    "gulp-twig": "^0.7.0"
+  }
+}

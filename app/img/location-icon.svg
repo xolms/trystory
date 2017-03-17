@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>BDABFFCB-D744-4F1F-83E7-00DB43C83FFB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M4.72333335,6.0572156 C5.83585819,6.0572156 6.73773776,5.15324634 6.73773776,4.03814373 C6.73773776,2.92304113 5.83585819,2.01907187 4.72333335,2.01907187 C3.61080851,2.01907187 2.70892894,2.92304113 2.70892894,4.03814373 C2.70892894,5.15324634 3.61080851,6.0572156 4.72333335,6.0572156 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4.02880883" height="4.03814373" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g id="4.-Search-Multiple-stories-Copy" transform="translate(-17.000000, -103.000000)" stroke="#000000">
+            <g id="Search-bar" transform="translate(0.000000, 80.000000)">
+                <g id="Location">
+                    <g id="Location-icon" transform="translate(17.970072, 23.619294)">
+                        <path d="M4.38453346,12.4509432 C4.38453346,12.4509432 9.17474268,6.7695489 9.17474268,4.36102261 C9.17474268,1.95249633 7.12090657,0 4.58737134,0 C2.05383611,0 0,1.95249633 0,4.36102261 C0,6.7695489 4.38453346,12.4509432 4.38453346,12.4509432 Z" id="Combined-Shape" stroke-width="1.04999998"></path>
+                        <use id="Oval-95" mask="url(#mask-2)" stroke-width="2.09999996" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
